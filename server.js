@@ -36,6 +36,7 @@ const root = tree.getHexRoot();
 
 const app = express();
 
+const domainsFromEnv = process.env.CORS_DOMAINS || ""
 const whitelist = domainsFromEnv.split(",").map(item => item.trim());
 
 const corsOptions = {
